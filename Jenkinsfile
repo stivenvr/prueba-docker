@@ -9,7 +9,9 @@ pipeline{
             }
         }
         stage("docker-compose"){
-            sh "docker-compose up"
+            steps{
+                sh "docker-compose up"
+            }
         }
     }
 }
